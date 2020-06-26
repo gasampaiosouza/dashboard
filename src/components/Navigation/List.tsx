@@ -1,9 +1,36 @@
 import React from 'react';
+import style from './style.module.scss';
 
-const List = () => {
+interface listType {
+  title: string;
+  data: {
+    icon?: JSX.Element;
+    title: string;
+    quantity?: string | number;
+  }[];
+}
+
+const List = (props: listType) => {
   return (
     <div>
-      <h1>list</h1>
+      <h2 className={style['list--title']}>{props.title}</h2>
+
+      <ul className={style['list']}>
+        {props.data.map(({ icon, title, quantity }) => (
+          <li className={style['list--item']}>
+            <span className={style['list--leftSide']}>
+              {icon ? (
+                <span className={style['list--icon']}>{icon}</span>
+              ) : null}
+              <p className={style['list--name']}>{title}</p>
+            </span>
+
+            <span className={style['list--rightSide']}>
+              <p className={style['list--quantity']}>{quantity}</p>
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

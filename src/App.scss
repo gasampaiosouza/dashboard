@@ -1,4 +1,4 @@
-$main: #06d6a0;
+$main: #7678ed;
 $black: #073b4c;
 
 * {
@@ -6,8 +6,11 @@ $black: #073b4c;
   padding: 0;
   box-sizing: border-box;
 
-  font-family: Fira Sans, sans-serif;
   color: $black;
+}
+
+body {
+  background: #f6f6f6;
 }
 
 .container {
@@ -16,6 +19,7 @@ $black: #073b4c;
 
   display: flex;
   justify-content: space-between;
+  font-family: Inter, sans-serif;
 
   &::after {
     content: '';
@@ -36,6 +40,10 @@ $black: #073b4c;
   box-shadow: 5px 5px 15px rgba($black, 0.15);
   border-radius: 2.5px;
   padding: 15px 0;
+
+  &:first-child {
+    padding-bottom: 0;
+  }
 }
 
 .desc {

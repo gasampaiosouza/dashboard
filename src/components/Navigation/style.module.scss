@@ -1,8 +1,10 @@
 @import '../../App.scss';
 
+$list-padding: 15px;
+
 .navigation--container {
   // for now
-  height: 90vh;
+  height: auto;
   width: 350px;
 }
 
@@ -33,13 +35,11 @@
 
 .list {
   &--title {
-    padding: 10px 25px;
+    padding: 15px $list-padding;
     background: rgba($black, 0.05);
-    font-size: 1em;
-    font-weight: 900;
+    font-size: 0.9em;
+    font-weight: 500;
     color: rgba($black, 0.75);
-
-    letter-spacing: 0.25px;
   }
 
   &--item {
@@ -50,7 +50,8 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 25px;
+    padding: 18px $list-padding;
+    font-weight: 500;
 
     &::after {
       content: '';
@@ -59,7 +60,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      background: #eee;
+      background: rgba($black, 0.05);
     }
 
     &:last-child::after {
@@ -99,7 +100,7 @@
 
   &--quantity {
     // font-weight: 900;
-    color: rgba($black, 0.25);
-    letter-spacing: 0.5px;
+    color: rgba($black, 0.35);
+    letter-spacing: -0.5px;
   }
 }
