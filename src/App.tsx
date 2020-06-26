@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.scss';
+import { Navigation } from './components/Navigation/Navigation';
+import { Main } from './components/Main/Main';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1>Hello world!</h1>
+    <div className="container">
+      <Navigation></Navigation>
+      <Main></Main>
     </div>
   );
-}
+};
 
 export default App;
