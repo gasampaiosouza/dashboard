@@ -6,12 +6,13 @@ import { firstListContent, secondListContent } from './content';
 
 export const Navigation: React.FC = () => {
   return (
-    <div className={`${style['navigation--container']} box`}>
+    <section className={`${style['navigation--container']} box`}>
       <UserImage />
+
       <div className={style['list--container']}>
         <List title="Dashboard" data={firstListContent} />
         <List title="Account settings" data={secondListContent} />
       </div>
-    </div>
+    </section>
   );
 };

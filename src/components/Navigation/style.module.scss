@@ -1,7 +1,5 @@
 @import '../../App.scss';
 
-$list-padding: 15px;
-
 .navigation--container {
   // for now
   height: auto;
@@ -35,7 +33,7 @@ $list-padding: 15px;
 
 .list {
   &--title {
-    padding: 15px $list-padding;
+    padding: 15px $side-padding;
     background: rgba($black, 0.05);
     font-size: 0.9em;
     font-weight: 500;
@@ -50,7 +48,7 @@ $list-padding: 15px;
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px $list-padding;
+    padding: 18px $side-padding;
     font-weight: 500;
 
     &::after {

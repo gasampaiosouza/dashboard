@@ -1,8 +1,58 @@
-.mainContainer {
-  width: calc(100% - 400px);
+@import '../../App.scss';
 
+.main--container {
+  width: calc(100% - 400px);
   // for now
   height: 90vh;
 
   box-shadow: 5px 5px 15px rgba(#212121, 0.15);
+
+  display: grid;
+  grid-template-columns: 80% auto;
+  grid-template-rows: 200px auto;
+  gap: $side-padding;
+}
+
+.sales {
+  grid-column: 1 / 3;
+
+  &--title {
+    font-size: 1.8em;
+  }
+
+  .cards--container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &--card {
+    margin: $side-padding;
+    padding: 25px $side-padding;
+    width: 250px;
+    background: rgba($black, 0.05);
+    border-radius: 5px;
+    text-align: center;
+
+    &--title {
+      font-size: 0.9em;
+    }
+
+    &--price {
+      margin: 10px 0;
+      font-size: 2em;
+    }
+
+    &--desc {
+      opacity: 0.35;
+    }
+  }
+}
+
+.chart--container {
+  background: red;
+}
+
+.countries {
+  background: green;
 }
