@@ -1,3 +1,5 @@
+@import './fn.scss';
+
 $main: #7678ed;
 $black: #073b4c;
 
@@ -24,8 +26,7 @@ body {
   width: 80vw;
   margin: 25px auto;
 
-  display: flex;
-  justify-content: space-between;
+  @include flex(space-between, default);
   font-family: Inter, sans-serif;
 
   &::after {

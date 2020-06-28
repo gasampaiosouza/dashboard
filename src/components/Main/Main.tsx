@@ -4,7 +4,7 @@ import style from './style.module.scss';
 import Sales from './Sales';
 import Chart from './Chart';
 import Countries from './Countries';
-import content from './content';
+import { content } from './content';
 
 export const Main: React.FC = () => {
   return (

@@ -16,8 +16,8 @@ const List = (props: listType) => {
       <h2 className={style['list--title']}>{props.title}</h2>
 
       <ul className={style['list']}>
-        {props.data.map(({ icon, title, quantity }) => (
-          <li className={style['list--item']}>
+        {props.data.map(({ icon, title, quantity }, i) => (
+          <li className={style['list--item']} key={i}>
             <span className={style['list--leftSide']}>
               {icon ? (
                 <span className={style['list--icon']}>{icon}</span>

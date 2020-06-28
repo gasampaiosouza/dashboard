@@ -3,13 +3,11 @@
 .navigation--container {
   // for now
   height: auto;
-  width: 350px;
+  width: 375px;
 }
 
 .image--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
   text-align: center;
 
   width: 100%;
@@ -44,9 +42,7 @@
     cursor: pointer;
     position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between, center);
 
     padding: 18px $side-padding;
     font-weight: 500;
@@ -77,17 +73,14 @@
   }
 
   &--leftSide {
-    display: flex;
-    align-items: center;
+    @include flex(default, center);
   }
 
   &--icon {
     width: 25px;
     height: 25px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
 
     margin-right: 5px;
 

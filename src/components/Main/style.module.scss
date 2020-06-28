@@ -1,14 +1,13 @@
 @import '../../App.scss';
+@import '../../fn.scss';
 
 .main--container {
   width: calc(100% - 400px);
-  // for now
-  height: 90vh;
 
   box-shadow: 5px 5px 15px rgba(#212121, 0.15);
 
   display: grid;
-  grid-template-columns: 80% auto;
+  grid-template-columns: 70% auto;
   grid-template-rows: 200px auto;
   gap: $side-padding;
 }
@@ -21,9 +20,7 @@
   }
 
   .cards--container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flex(space-between, default, default, wrap);
   }
 
   &--card {
@@ -49,10 +46,35 @@
   }
 }
 
-.chart--container {
-  background: red;
+.countries {
+  border: 2px solid rgba($black, 0.05);
+
+  @include flex(space-between, default, column);
+
+  height: 75%;
+  padding: 25px;
+  border-radius: 10px;
+
+  &--title {
+    font-size: 0.9em;
+    margin-bottom: 25px;
+  }
+
+  &--item {
+    padding: 15px 0;
+    border-top: 1px solid rgba($black, 0.1);
+
+    @include flex(default, center);
+  }
+
+  &--flag {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 }
 
-.countries {
-  background: green;
+.chart--container {
+  // background: red;
 }

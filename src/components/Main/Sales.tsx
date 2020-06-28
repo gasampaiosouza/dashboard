@@ -17,9 +17,9 @@ const Sales = ({ cardContent }: salesType) => {
       </h1>
 
       <div className={style['cards--container']}>
-        {cardContent.map(({ title, price, description }) => {
+        {cardContent.map(({ title, price, description }, i) => {
           return (
-            <div className={style['sales--card']}>
+            <div className={style['sales--card']} key={i}>
               <span className={style['sales--card--title']}>{title}</span>
               <h1 className={style['sales--card--price']}>{`$${price}`}</h1>
               <p className={style['sales--card--desc']}>{description}</p>

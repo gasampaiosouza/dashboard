@@ -1,4 +1,4 @@
-const content = [
+export const content = [
   {
     title: 'Earnings (before taxes)',
     price: '842.00',
@@ -16,4 +16,30 @@ const content = [
   },
 ];
 
-export default content;
+export const countries = [
+  {
+    name: 'United States',
+    flag: 'usa',
+  },
+  {
+    name: 'Sweden',
+    flag: 'sweden',
+  },
+  {
+    name: 'India',
+    flag: 'india',
+  },
+
+  {
+    name: 'France',
+    flag: 'france',
+  },
+  {
+    name: 'Argentina',
+    flag: 'argentina',
+  },
+  {
+    name: 'South Africa',
+    flag: 'south-africa',
+  },
+];
