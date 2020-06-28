@@ -2,7 +2,7 @@
 
 I redesigned a dashboard i saw in the web!
 
-![Dashboard video](https://imgur.com/IWizgMN)
+![Dashboard video](https://imgur.com/IWizgMN.mp4)
 
 # Made with
 
