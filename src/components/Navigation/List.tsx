@@ -18,7 +18,7 @@ const List = (props: listType) => {
       <ul className={style['list']}>
         {props.data.map(({ icon, title, quantity }, i) => (
           <li className={style['list--item']} key={i}>
-            <span className={style['list--leftSide']}>
+            <span className="leftSide">
               {icon ? (
                 <span className={style['list--icon']}>{icon}</span>
               ) : null}

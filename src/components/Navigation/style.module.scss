@@ -2,7 +2,7 @@
 
 .navigation--container {
   // for now
-  height: auto;
+  height: 850px;
   width: 375px;
 }
 
@@ -72,17 +72,11 @@
     }
   }
 
-  &--leftSide {
-    @include flex(default, center);
-  }
-
   &--icon {
     width: 25px;
     height: 25px;
 
     @include flex(center, center);
-
-    margin-right: 5px;
 
     svg path {
       color: rgba($black, 0.25);

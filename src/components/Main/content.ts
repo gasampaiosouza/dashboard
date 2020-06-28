@@ -29,7 +29,6 @@ export const countries = [
     name: 'India',
     flag: 'india',
   },
-
   {
     name: 'France',
     flag: 'france',

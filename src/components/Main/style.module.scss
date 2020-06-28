@@ -3,13 +3,11 @@
 
 .main--container {
   width: calc(100% - 400px);
+  min-width: 350px;
 
   box-shadow: 5px 5px 15px rgba(#212121, 0.15);
 
-  display: grid;
-  grid-template-columns: 70% auto;
-  grid-template-rows: 200px auto;
-  gap: $side-padding;
+  @include flex(default, default, column);
 }
 
 .sales {
@@ -20,14 +18,17 @@
   }
 
   .cards--container {
-    @include flex(space-between, default, default, wrap);
+    @include flex(center, center, default, wrap);
+
+    margin: $side-padding 0;
+    width: 100%;
   }
 
   &--card {
     margin: $side-padding;
     padding: 25px $side-padding;
     width: 250px;
-    background: rgba($black, 0.05);
+    background: rgba($black, 0.025);
     border-radius: 5px;
     text-align: center;
 
@@ -51,20 +52,85 @@
 
   @include flex(space-between, default, column);
 
-  height: 75%;
-  padding: 25px;
+  width: calc(100% - 40px);
+
+  padding: 25px $side-padding;
+  padding-bottom: 0;
   border-radius: 10px;
+  height: 540px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 15px rgba($main, 0.25);
+    background: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $main;
+  }
 
   &--title {
-    font-size: 0.9em;
+    font-size: 1em;
+    font-weight: 900;
     margin-bottom: 25px;
   }
 
   &--item {
+    position: relative;
+
     padding: 15px 0;
     border-top: 1px solid rgba($black, 0.1);
 
-    @include flex(default, center);
+    @include flex(space-between, center);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      right: -15px;
+      bottom: 0;
+
+      width: 0%;
+      height: 100%;
+
+      // background: transparent;
+      background: rgba($black, 0.025);
+
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      left: -15px;
+      width: calc(100% + 30px);
+    }
+
+    // highlight the first 5 countries
+    &:nth-child(-n + 6) .countries--position {
+      color: $main;
+    }
+
+    // align position < 10
+    &:nth-child(-n + 10) .countries--position {
+      left: 5px;
+    }
+  }
+
+  &--position {
+    // to align the countries' names
+    position: absolute;
+
+    font-weight: 900;
+    color: rgba($black, 0.2);
+    font-size: 1.5em;
+  }
+
+  &--name {
+    margin-left: 45px;
   }
 
   &--flag {
@@ -72,9 +138,9 @@
     height: 25px;
     border-radius: 50%;
     margin-right: 10px;
+
+    box-shadow: 0 0 15px rgba($black, 0.15);
   }
 }
 
-.chart--container {
-  // background: red;
-}
+// media query
