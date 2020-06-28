@@ -34,7 +34,12 @@ const UserImage = () => {
     <div className={style['image--container']}>
       {user?.map(({ name, username, picture, id }) => (
         <div key={id}>
-          <img src={picture} alt="user" className={style['user--image']} />
+          <img
+            src={picture}
+            alt="user"
+            className={style['user--image']}
+            draggable="false"
+          />
           <h1 className={style['user--name']}>{name}</h1>
           <p className={`${style['user--desc']} desc`}>{`@${username}`}</p>
         </div>

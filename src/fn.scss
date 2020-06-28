@@ -6,3 +6,24 @@
 
   flex-wrap: $wrap;
 }
+
+@mixin addAnimation(
+  $element_name,
+  $animation_name,
+  $elements_number,
+  $seconds: 0.2,
+  $stop: false
+) {
+  $counter: 0;
+  @for $i from 1 through $elements_number {
+    &:nth-child(#{$i}) {
+      animation: $animation_name #{$seconds + $counter}s ease-in-out;
+    }
+
+    @if $stop and $i == $stop {
+      $counter: 0;
+    }
+
+    $counter: $counter + 0.15;
+  }
+}
