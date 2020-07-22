@@ -1,18 +1,21 @@
 # Dashboard
 
-I redesigned a interactive dashboard i saw in the web!
+I redesigned an interactive dashboard i saw in the web!
 
 ![Dashboard video](https://imgur.com/RJ43yXC.png)
 
 ## How to execute it
 
-- clone this repository with `git clone https://github.com/gasampaiosouza/dashboard.git <add a folder if you want>`
-- go to the folder with `cd <folder's name>`
+- clone and install it's dependecies:
+```
+git clone https://github.com/gasampaiosouza/dashboard.git
+cd dashboard
+npm install
+npm start
+```
 
-  > obs: default folder's name is "dashboard"
+and now you're ready to rock!
 
-- install the dependencies with `npm install` or `yarn add`
-- execute it! `npm start` and you're ready to rock!
 
 ## Made with
 
